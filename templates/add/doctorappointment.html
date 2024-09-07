@@ -1,0 +1,47 @@
+{% extends "doctorbase.html" %}
+{% block content3 %}                          
+         <div>
+              
+            <h2 class="he">Your Appointments</h2>
+
+
+
+            <table class="table table-hover table-bordered">
+               
+                <thead>
+                    <tr>
+                        <th class="ap_h"> S_No </th>
+                        <th class="ap_h">Participant Id  </th>
+                        <th class="ap_h">Name</th>
+                        <th class="ap_h">Appointment Date</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for i in tup%}
+                        <tr>
+                            {% for j in i %}
+                                <td>{{ j }}</td>
+                            {% endfor %}
+                            <td><button id="bu" class="parpresc" type="button">Prescription</button><td>
+                            <td><button id="but" class="subm" type="button">Delete</button><td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+            <script   src="http://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+            <script src="{{url_for('static', filename='process.js')}}">
+            </script>
+            
+
+
+
+
+
+         
+        
+   
+    </body>
+</html>
+{% endblock %}

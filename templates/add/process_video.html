@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Upload Video</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="video">Select video:</label><br>
+        <input type="file" id="video" name="video" accept="video/*"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    <script type="text/javascript">
+        var process = "{{ process }}" ? true : false;
+        console.log(process);
+        if (process == true) {
+            alert("Video uploaded successfully");
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Upload Audio</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="audio">Select audio:</label><br>
+        <input type="file" id="audio" name="audio" accept="audio/*"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    <script type="text/javascript">
+        var process = "{{ process }}" ? true : false;
+        console.log(process);
+        if (process == true) {
+            alert("Audio uploaded successfully");
+        }
+    </script>
+{% endblock %}
